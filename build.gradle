@@ -1,6 +1,6 @@
 plugins {
     id 'com.google.protobuf' version '0.9.3'
-    id 'com.github.sherter.google-java-format' version '0.9'
+    id 'com.github.sherter.google-java-format' version '21.0.9'
     id 'idea'
     id 'application'
 }
@@ -20,8 +20,8 @@ def jacksonDatabindVersion = "2.15.0"
 def protocVersion = "3.22.3"
 
 tasks.withType(JavaCompile) {
-    sourceCompatibility = JavaVersion.VERSION_19
-    targetCompatibility = JavaVersion.VERSION_19
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 ext {
@@ -67,7 +67,7 @@ protobuf {
 }
 
 googleJavaFormat {
-    toolVersion '1.17.0'
+    toolVersion '21.0.9'
 }
 
 // Inform IDEs like IntelliJ IDEA, Eclipse or NetBeans about the generated code.
